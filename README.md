@@ -1,12 +1,13 @@
-# cheng-engine (Cheng Chess Engine)
+# BuckShot (Chess engine)
 
-Goofy goober type chess engine in C idk bro good enough I guess
-
-A lightweight, single-file chess engine written in C with multi-threading support and more goofy studd.
+A lightweight, single-file chess engine written in C with multi-threading support and more.
 
 ## Features
 
-- Uhhh it's cool i think
+- Magic bitboards
+- PVS (Principal Variation Search) with aspiration windows
+- Null-Move Pruning implemented with Dynamic R (3 + depth/6 + (eval-beta)/200)
+- Much more.
 
 ## Compilation
 
@@ -14,12 +15,12 @@ Requires a C compiler with pthread support and the math library.
 
 **Linux / macOS:**
 ```bash
-gcc cheng.c -o cheng -lpthread -lm -O3
+gcc buckshot.c -o buckshot -lpthread -lm -O3
 ```
 
 **Windows (MinGW):**
 ```bash
-gcc cheng.c -o cheng.exe -lpthread -lm -O3
+gcc buckshot.c -o buckshot -lpthread -lm -O3
 ```
 
 ## Usage
@@ -27,7 +28,7 @@ gcc cheng.c -o cheng.exe -lpthread -lm -O3
 Run the executable and follow the interactive prompts to configure threads, difficulty, and search depth.
 
 ```bash
-./cheng
+./buckshot
 ```
 
 **Controls:**
@@ -42,5 +43,6 @@ Run the executable and follow the interactive prompts to configure threads, diff
 
 ## License
 
+**MIT Licensed**
 This project is provided as-is for educational and development purposes.
 Look into the LICENSE file in the project root directory for more licensing information.
